@@ -1,0 +1,36 @@
+<div class ="container">
+  <div class="top_img">
+    <div class="serch_area">
+      <h3>Pote Shareでまだ体験したことのない旅をしよう</h3>
+      <br>
+      <p class="area">エリア</p>
+      <input class="serch_input" type="text" placeholder="（例）東京">
+      <br>
+      <br>
+      <button class="serch_button" type="button">
+        探す
+      </button>
+    </div>
+  </div>
+  <div class="recomend_area">
+    <h2>オススメのエリア</h2>
+    <div class="grid">
+      <div class="grid_child_1">
+        <%= link_to '東京'%><br>
+        <%=image_tag 'img_tokyo.jpeg', size: '250x350' %>
+      </div>
+      <div class="grid_child_2">
+        <%= link_to "大阪", class:"Editlink"%><br>
+        <%=image_tag 'img_osaka.jpeg', size: '250x350' %>
+      </div>
+      <div class="grid_child_3">
+        <%= link_to "京都"%><br>
+        <%=image_tag 'img_kyoto.jpeg', size: '250x350' %>
+      </div>
+      <div class="grid_child_4">
+        <%= link_to "札幌"%><br>
+        <%=image_tag 'img_sapporo.jpeg', size: '250x350' %>
+      </div>
+    </div>
+  </div>
+</div>

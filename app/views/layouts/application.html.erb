@@ -1,0 +1,45 @@
+<html>
+  <head>
+    <title>ShareApp</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+  <header>
+    <h1 class="link"><%= link_to "PoteShare", class:"link" %></h1>
+    <% if user_signed_in? %>
+      <div class="navi-container">
+        <input id="acd-check1" class="acd-check" type="checkbox">
+        <label class="acd-label" for="acd-check1">menu</label>
+        <div class="acd-content">
+          <ul>
+            <li>ルーム登録</li>
+            <li>予約一覧</li>
+            <li>登録一覧</li>
+            <li>設定</li>
+            <li><%= link_to 'ログアウト', destroy_user_session_path, method: :delete %></li>
+          </ul>
+        </div>
+      </div>
+    <% else %>
+    <!-- ユーザーがログインしていなかった時の処理 -->
+    <div class="header-menu">
+      <ul>
+        <li class= "menu-login"><%= link_to "ログイン", new_user_session_path, class:'Editlink' %></li> <!-- ログイン画面に移行する -->
+        <li class= "menu-signup"><%= link_to "新規登録", new_user_registration_path, class: 'Editlink' %></li> <!-- 新規登録画面に移行する -->
+      </ul>
+    </div>
+
+    <% end %>
+  </header>
+    <%= yield %>
+  <footer>
+    <p>&copy; 2022 takeC</p>
+  </footer>
+  </body>
+</html>
