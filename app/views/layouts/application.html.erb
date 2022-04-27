@@ -11,14 +11,14 @@
 
   <body>
   <header>
-    <h1 class="link"><%= link_to "PoteShare", class:"link" %></h1>
+    <h1 class="link"><%= link_to "PoteShare",:users, class:"link" %></h1>
     <% if user_signed_in? %>
-      <div class="navi-container">
+      <div class="header-navi">
         <input id="acd-check1" class="acd-check" type="checkbox">
         <label class="acd-label" for="acd-check1">menu</label>
         <div class="acd-content">
           <ul>
-            <li>ルーム登録</li>
+            <li><%=link_to"新規ルーム登録",:new_room%>
             <li>予約一覧</li>
             <li>登録一覧</li>
             <li>設定</li>

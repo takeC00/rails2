@@ -56,3 +56,6 @@ end
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 gem 'devise'
 gem 'rails-i18n'
+gem 'carrierwave', '~> 2.0'
+gem 'pry-rails'
+gem 'mini_magick'

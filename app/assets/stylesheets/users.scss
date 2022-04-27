@@ -5,13 +5,6 @@ header, footer {
   background-color: black;
   color: aliceblue;
 }
-
-header {
-  height: 180px;
-  padding: 0 40px;
-  display: flex;
-  justify-content: space-between;
-}
 ul {
   display: flex;
 }
@@ -112,40 +105,42 @@ h3 {
   border: none;
   padding: 10px 0;
 }
+header {
+  height: 180px;
+  padding: 0 40px;
+  display: flex;
+  justify-content: space-between;
+}
 
 .recomend_area {
   width: 80%;
   margin: 0 auto;
   padding: 80 0px;
 }
-.navi-container {
-  
-  margin-right: 30px;
-  margin-bottom: 5px;
-}
+
+
 .acd-check{
   display: none;
 }
 .acd-label{
   background: rgb(0, 0, 0);
   color: #fff;
-  display: block;
-  font-size: 26px;
 
+  font-size: 26px;
 }
 .acd-content{
+  background-color: black;
   height: 0;
   opacity: 0;
-  padding: 0 10px;
   transition: .5s;
   visibility: hidden;
 }
 .acd-check:checked + .acd-label + .acd-content{
-  height: 40px;
+  height: 100px;
   opacity: 1;
   padding: 10px;
   visibility: visible;
-  z-index: 100;
+
 }
 
 
