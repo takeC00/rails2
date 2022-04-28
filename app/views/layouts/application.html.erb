@@ -21,8 +21,7 @@
             <li><%=link_to"新規ルーム登録",:new_room%>
             <li>予約一覧</li>
             <li>登録一覧</li>
-            <%user = @user%>
-            <li><%=link_to"設定",user_path(1)%>設定</li>
+            <li><%=link_to"設定",current_user%>設定</li>
             <li><%= link_to 'ログアウト', destroy_user_session_path, method: :delete %></li>
           </ul>
         </div>

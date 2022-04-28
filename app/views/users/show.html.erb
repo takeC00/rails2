@@ -6,11 +6,11 @@
 <div>
   <p class="under-bar">アカウント</p>
   <p>メールアドレス</p>
-  <p class="under-bar"><%= @user.email%></p>
+  <p class="under-bar"><%= @user.name%></p>
   <p>パスワード</p>
-  <p><%= @user.encrypted_password%></p>
+  <p>＊＊＊＊＊＊＊＊</p>
 </div>
 
 <button>
-  編集
+  <%=link_to '編集',edit_user_registration_path%>
 </button>
