@@ -140,8 +140,19 @@ header {
   opacity: 1;
   padding: 10px;
   visibility: visible;
-
 }
+
+.account-navi {
+  display: flex;
+}
+
+.choice-account {
+  margin-right: 40px;
+}
+.under-bar {
+  border-bottom: 1px gray solid;
+}
+
 
 
 

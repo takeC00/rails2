@@ -1,0 +1,20 @@
+<div class="account-navi">
+  <p class="choice-account"><%= link_to'アカウント',user_path(1)%></p>
+  <p class="choice-profile"><%= link_to'プロフィール','/users/profile'%></p>
+</div>
+
+<div>
+  <%= form_with model: @room do |f| %>
+  <p class="under-bar">プロフィール</p>
+  <p>アイコン画像</p>
+  <%= f.file_field :avatar%>
+  <p>名前</p>
+  <input>
+  <p>自己紹介</p>
+  <textarea></textarea>
+  <%end%>
+</div>
+
+<button>
+  編集
+</button>

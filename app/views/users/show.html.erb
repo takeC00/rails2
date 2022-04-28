@@ -1,0 +1,16 @@
+<div class="account-navi">
+  <p class="choice-account"><%= link_to'アカウント',user_path%></p>
+  <p class="choice-profile"><%= link_to'プロフィール','/users/profile'%></p>
+</div>
+
+<div>
+  <p class="under-bar">アカウント</p>
+  <p>メールアドレス</p>
+  <p class="under-bar"><%= @user.email%></p>
+  <p>パスワード</p>
+  <p><%= @user.encrypted_password%></p>
+</div>
+
+<button>
+  編集
+</button>
