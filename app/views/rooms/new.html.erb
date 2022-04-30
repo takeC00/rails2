@@ -7,6 +7,7 @@
 
 <%= form_with model: @room do |f| %>
   <table cellpadding="30" border-bottom="1">
+  
     <tr class="table-title">
       <th><%= f.label :name ,"ルーム名" %><span class="attention">必須<span></th>
       <td><%= f.text_field :name, :placeholder => "ルーム名を入力" %></td>

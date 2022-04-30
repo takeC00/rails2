@@ -1,5 +1,5 @@
 
-class Room < ActiveRecord::Base
+class Room < ApplicationRecord
   mount_uploader :avatar, AvatarUploader
   validates :name, presence: true
   validates :introduction, presence: true
