@@ -1,12 +1,7 @@
 class UsersController < ApplicationController
-  before_action :authenticate_user!
-
+  
   def index
     @users = User.all
-  end
-
-  def show
-    @user = current_user
   end
 
   def new
@@ -14,7 +9,7 @@ class UsersController < ApplicationController
   end
 
   def create
-    @user = User.new(params.require(:room).permit(:name,:email,:password,:icon))
+    @user = User.new(params.require(:user).permit(:name,:email,:password,:icon))
     if @user.save
       flash[:notice]="ユーザーを新規登録しました"
       redirect_to :users
@@ -22,6 +17,10 @@ class UsersController < ApplicationController
       flash[:notice]="登録に失敗しました"
       render "new"
     end
+  end
+
+  def show
+    @user = current_user
   end
 
   def edit
@@ -40,9 +39,5 @@ class UsersController < ApplicationController
   def image_for
     @user = User.find(params[:id])
     send_data(@user.image)
-  end
-
-  def user_params
-    params.require(:user).permit(:name, :password, :icon) # 変更後
   end
 end

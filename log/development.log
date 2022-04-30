@@ -24326,3 +24326,190 @@ Processing by UsersController#profile as HTML
 Completed 200 OK in 26ms (Views: 21.7ms | ActiveRecord: 0.2ms | Allocations: 6093)
 
 
+Started GET "/users/profile" for ::1 at 2022-05-01 08:29:16 +0900
+Processing by UsersController#profile as HTML
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 25], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering users/profile.html.erb within layouts/application
+  Rendered users/profile.html.erb within layouts/application (Duration: 0.7ms | Allocations: 111)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 13.9ms | Allocations: 3877)
+Completed 200 OK in 23ms (Views: 14.9ms | ActiveRecord: 0.7ms | Allocations: 6679)
+
+
+Started GET "/users/25" for ::1 at 2022-05-01 08:29:17 +0900
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"25"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 25], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (Duration: 0.9ms | Allocations: 117)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 11.7ms | Allocations: 4488)
+Completed 200 OK in 17ms (Views: 12.5ms | ActiveRecord: 0.2ms | Allocations: 6113)
+
+
+Started GET "/users/profile" for ::1 at 2022-05-01 08:29:18 +0900
+Processing by UsersController#profile as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 25], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering users/profile.html.erb within layouts/application
+  Rendered users/profile.html.erb within layouts/application (Duration: 0.4ms | Allocations: 111)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 9.2ms | Allocations: 4455)
+Completed 200 OK in 14ms (Views: 9.8ms | ActiveRecord: 0.2ms | Allocations: 6080)
+
+
+Started GET "/users/25" for ::1 at 2022-05-01 08:29:25 +0900
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"25"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 25], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (Duration: 0.4ms | Allocations: 117)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 11.2ms | Allocations: 4432)
+Completed 200 OK in 17ms (Views: 12.0ms | ActiveRecord: 0.2ms | Allocations: 6088)
+
+
+Started GET "/users/25" for ::1 at 2022-05-01 08:33:07 +0900
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"25"}
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 25], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (Duration: 0.2ms | Allocations: 202)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 6.8ms | Allocations: 4299)
+Completed 200 OK in 17ms (Views: 7.3ms | ActiveRecord: 0.6ms | Allocations: 13834)
+
+
+Started DELETE "/users/sign_out" for ::1 at 2022-05-01 08:33:11 +0900
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 25], ["LIMIT", 1]]
+Redirected to http://localhost:3000/
+Completed 302 Found in 8ms (ActiveRecord: 0.2ms | Allocations: 2791)
+
+
+Started GET "/" for ::1 at 2022-05-01 08:33:11 +0900
+Processing by UsersController#index as HTML
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms | Allocations: 249)
+
+
+Started GET "/users/sign_in" for ::1 at 2022-05-01 08:33:11 +0900
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 0.5ms | Allocations: 187)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 2.7ms | Allocations: 1221)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 10.2ms | Allocations: 5291)
+Completed 200 OK in 13ms (Views: 11.7ms | ActiveRecord: 0.0ms | Allocations: 6220)
+
+
+Started GET "/users/sign_up" for ::1 at 2022-05-01 08:33:14 +0900
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (Duration: 0.2ms | Allocations: 54)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 4.3ms | Allocations: 1738)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 14.4ms | Allocations: 5893)
+Completed 200 OK in 18ms (Views: 16.7ms | ActiveRecord: 0.0ms | Allocations: 7527)
+
+
+Started POST "/users" for ::1 at 2022-05-01 08:33:29 +0900
+Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"name"=>"hoge ", "email"=>"hoge@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"登録"}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "hoge@gmail.com"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+  Rendering layout layouts/application.html.erb
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (Duration: 2.4ms | Allocations: 1408)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 5.5ms | Allocations: 3688)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 9.9ms | Allocations: 7449)
+Completed 200 OK in 424ms (Views: 10.1ms | ActiveRecord: 0.2ms | Allocations: 13535)
+
+
+Started POST "/users" for ::1 at 2022-05-01 08:33:46 +0900
+Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"name"=>"hoge ", "email"=>"hoge@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "icon"=>#<ActionDispatch::Http::UploadedFile:0x000000010bfbf840 @tempfile=#<Tempfile:/var/folders/mx/pq5bj_4570s526_6wlscb5840000gn/T/RackMultipart20220501-19629-53vhn0.jpeg>, @original_filename="sample.jpeg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"user[icon]\"; filename=\"sample.jpeg\"\r\nContent-Type: image/jpeg\r\n">}, "commit"=>"登録"}
+[31mUnpermitted parameter: :icon[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "hoge@gmail.com"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mrollback transaction[0m
+  Rendering layout layouts/application.html.erb
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (Duration: 1.0ms | Allocations: 511)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 3.1ms | Allocations: 2225)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 7.3ms | Allocations: 6004)
+Completed 200 OK in 428ms (Views: 7.6ms | ActiveRecord: 0.2ms | Allocations: 11411)
+
+
+Started GET "/users" for ::1 at 2022-05-01 08:37:13 +0900
+Processing by UsersController#index as HTML
+Completed 401 Unauthorized in 1ms (Allocations: 947)
+
+
+Started GET "/users/sign_in" for ::1 at 2022-05-01 08:37:14 +0900
+Processing by Devise::SessionsController#new as HTML
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 0.2ms | Allocations: 187)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 1.3ms | Allocations: 1232)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 7.0ms | Allocations: 5284)
+Completed 200 OK in 15ms (Views: 7.6ms | ActiveRecord: 0.5ms | Allocations: 13025)
+
+
+Started GET "/users/sign_up" for ::1 at 2022-05-01 08:37:15 +0900
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (Duration: 0.1ms | Allocations: 60)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 3.8ms | Allocations: 1711)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 13.3ms | Allocations: 6459)
+Completed 200 OK in 16ms (Views: 14.6ms | ActiveRecord: 0.0ms | Allocations: 7558)
+
+
+Started POST "/users" for ::1 at 2022-05-01 08:37:34 +0900
+Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"name"=>"a", "email"=>"tata@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "icon"=>#<ActionDispatch::Http::UploadedFile:0x000000010bee7a30 @tempfile=#<Tempfile:/var/folders/mx/pq5bj_4570s526_6wlscb5840000gn/T/RackMultipart20220501-19629-7yz5re.jpeg>, @original_filename="sample.jpeg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"user[icon]\"; filename=\"sample.jpeg\"\r\nContent-Type: image/jpeg\r\n">}, "commit"=>"登録"}
+[31mUnpermitted parameter: :icon[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "tata@gmail.com"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+  Rendering layout layouts/application.html.erb
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (Duration: 0.9ms | Allocations: 526)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 8.7ms | Allocations: 2246)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 12.9ms | Allocations: 6025)
+Completed 200 OK in 429ms (Views: 13.3ms | ActiveRecord: 0.2ms | Allocations: 12185)
+
+
+Started POST "/users" for ::1 at 2022-05-01 08:39:23 +0900
+Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"name"=>"a", "email"=>"tata@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "icon"=>#<ActionDispatch::Http::UploadedFile:0x000000010bb6e5e8 @tempfile=#<Tempfile:/var/folders/mx/pq5bj_4570s526_6wlscb5840000gn/T/RackMultipart20220501-19629-znpvxx.jpeg>, @original_filename="sample.jpeg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"user[icon]\"; filename=\"sample.jpeg\"\r\nContent-Type: image/jpeg\r\n">}, "commit"=>"登録"}
+[31mUnpermitted parameter: :icon[0m
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "tata@gmail.com"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+  Rendering layout layouts/application.html.erb
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (Duration: 1.1ms | Allocations: 640)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 3.0ms | Allocations: 2542)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 7.6ms | Allocations: 6573)
+Completed 200 OK in 414ms (Views: 7.9ms | ActiveRecord: 0.8ms | Allocations: 19735)
+
+

@@ -23,11 +23,6 @@ class RoomsController < ApplicationController
     @room = Room.find(params[:id])
   end
 
-  def image_for
-    @room = Room.find(params[:id])
-    send_data(@room.image)
-  end
-
   def edit
   end
 
@@ -35,5 +30,10 @@ class RoomsController < ApplicationController
   end
 
   def destroy
+  end
+
+  def image_for
+    @room = Room.find(params[:id])
+    send_data(@room.image)
   end
 end
