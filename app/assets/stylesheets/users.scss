@@ -151,8 +151,22 @@ header {
 }
 .under-bar {
   border-bottom: 1px gray solid;
+  padding-bottom: 30px;
 }
 
+.icon {
+  height: 100px;
+  width: 100px;
+  border-radius: 100px;
+  margin-bottom: 20px;
+}
 
+.profile-container {
+  text-align: center;
+  background-color: #95959b;
+  padding: 15px;
+}
 
-
+.name {
+  text-align: center;
+}

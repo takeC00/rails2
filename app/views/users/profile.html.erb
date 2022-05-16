@@ -1,26 +1,22 @@
 <div class="account-navi">
   <p class="choice-account"><%= link_to'アカウント',current_user%></p>
-  <p class="choice-profile"><%= link_to'プロフィール','/users/profile'%></p>
+  <p class="choice-profile"><%= link_to'プロフィール',users_profile_path%></p>
 </div>
 
-<table>
-  <thead>
-    <tr>
-      <th>アイコン</th>
-      <th>名前</th>
-      <th>自己紹介</th>
-    </tr>
-  </thead>
+<h2>プロフィール画面</h2>
 
-  <tbody>
-    <tr>
-      <td><%= @user.icon%></td>
-      <td><%= @user.name%></td>
-      
-    </tr>
-  </tbody>
-</table>
+<div class ="profile-container">
+  <div class="profile-icon">
+    <%= image_tag @user.icon.url, class: "icon"%>
+  </div>
+  <div class="profile-name">
+    <%= @user.name%>
+  </div>
+  <div class="profile-introduction">
+    <%= @user.introduction%>
+  </div>
+</div>
 
 <button>
-  編集
+  <%=link_to "編集する", "profile/edit"%>
 </button>
