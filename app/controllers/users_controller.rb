@@ -27,15 +27,13 @@ class UsersController < ApplicationController
     @user = current_user
   end
 
-  def update!
+  def update
     @user = User.find(params[:id])
-  
-    if @user.update(params.require(:user).permit(:icon,:introduction))
-    
+    binding.pry
+    if @user.update!(params.require(:user).permit(:icon,:introduction,:password))
       flash[:notice] = "ユーザーの情報を更新しました"
       redirect_to 'edit'
     else
-    
       render 'edit'
     end
   end
