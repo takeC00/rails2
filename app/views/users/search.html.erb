@@ -1,0 +1,13 @@
+<h1>検索結果</h1>
+<div class= "search-container">
+  <div class= "search-results-box">
+    <div class="search-results-date">
+      <% @results.each do |room| %>
+      <%= room.avatar %>
+      <%= room.introduction %>
+      <%= room.adress %>
+      <%= room.price %>
+      <%end%>
+    </div>
+  </div>
+</div>

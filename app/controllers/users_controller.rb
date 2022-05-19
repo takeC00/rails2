@@ -1,5 +1,4 @@
 class UsersController < ApplicationController
-
   def index
     @users = User.all
   end
@@ -29,10 +28,9 @@ class UsersController < ApplicationController
 
   def update
     @user = User.find(params[:id])
-    binding.pry
-    if @user.update!(params.require(:user).permit(:icon,:introduction,:password))
+    if @user.update!(params.require(:user).permit(:icon,:introduction))
       flash[:notice] = "ユーザーの情報を更新しました"
-      redirect_to 'edit'
+      redirect_to action: :profile
     else
       render 'edit'
     end

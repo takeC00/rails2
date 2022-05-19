@@ -1,15 +1,20 @@
+<% if flash[:notice]%>
+  <p class="notice-ok"><%= flash[:notice]%></p>
+<%end%>
+
 <div class ="container">
   <div class="top_img">
     <div class="serch_area">
       <h3>Pote Shareでまだ体験したことのない旅をしよう</h3>
       <br>
       <p class="area">エリア</p>
-      <input class="serch_input" type="text" placeholder="（例）東京">
-      <br>
-      <br>
-      <button class="serch_button" type="button">
-        探す
-      </button>
+      
+      <%= search_form_for @q, url: search_rooms_path do |f| %>
+        <%= f.search_field :adress_cont, placeholder:'東京' %>
+        <br>
+        <%= f.submit '検索' %>
+      <% end %>
+    
     </div>
   </div>
   <div class="recomend_area">

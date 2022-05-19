@@ -1,3 +1,8 @@
+
+<% if flash[:notice]%>
+  <p class="notice-ok"><%= flash[:notice]%></p>
+<%end%>
+
 <div class="account-navi">
   <p class="choice-account"><%= link_to'アカウント',current_user%></p>
   <p class="choice-profile"><%= link_to'プロフィール',users_profile_path%></p>

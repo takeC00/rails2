@@ -2,7 +2,7 @@
 <h3 class=room-new-title>ルーム登録</h3>
 
 <% if flash[:notice]%>
-  <p class="notice-ng"><%= flash[:notice]%></p>
+  <p class="notice-ok"><%= flash[:notice]%></p>
 <%end%>
 
 <%= form_with model: @room do |f| %>
