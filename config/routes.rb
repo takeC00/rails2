@@ -8,11 +8,7 @@ Rails.application.routes.draw do
   get 'users/profile/edit', to: 'users#edit'
   patch 'users/profile/edit', to: 'users#update'
   
-  resources :users do
-    collection do
-      get 'search'
-    end
-  end
+  resources :users 
 
   resources :rooms do
     collection do
