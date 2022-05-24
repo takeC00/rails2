@@ -15,7 +15,7 @@
     
     <%= search_form_for @q, url: search_rooms_path do |f| %>
       <%= f.search_field :adress_cont, placeholder:'エリア' %>
-      <%= f.search_field :name_or_introduction_cont, placeholder:'キーワード' %>
+      <%= f.search_field :name_or_introduction_or_price_cont, placeholder:'キーワード' %>
       <%= f.submit '検索'%>
     <% end %>
     
@@ -26,7 +26,7 @@
         <div class="acd-content">
           <ul>
             <li><%=link_to "新規ルーム登録",:new_room%></li>
-            <li><%=link_to "予約一覧"%></li>
+            <li><%=link_to "予約一覧", reservations_path%></li>
             <li><%=link_to "登録一覧",:rooms%></li>
             <li><%=link_to "設定",current_user%></li>
             <li><%=link_to "ログアウト", destroy_user_session_path, method: :delete %></li>

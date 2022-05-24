@@ -13,7 +13,7 @@
   <tbody>
     <% @results.each do |room| %>
       <tr>
-        <td><%=link_to room.name %></td>
+        <td><%=link_to room.name, new_reservation_path(room.id) %></td>
         <td><%= image_tag room.avatar.url%></td>
         <td><%= room.adress %></td>
         <td><%= room.price %></td>

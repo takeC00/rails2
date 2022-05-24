@@ -1,23 +1,23 @@
 class RoomsController < ApplicationController
-
+  before_action :set_q
+  before_action :search
   def index
     @rooms = Room.all
   end
 
   def new
-    @room =Room.new
-    binding.pry
+    @room = Room.new
   end
 
   def create
     
-    @room = Room.new(params.require(:room).permit(:name,:introduction,:price,:adress,:avatar))
-    binding.pry
+    @room = Room.new(params.require(:room).permit(:name,:introduction,:price,:adress,:avatar,:user_id))
+    
     if @room.save!
       flash[:notice]="ルームを新規登録しました"
       redirect_to :rooms
     else
-      binding.pry
+      
       flash[:notice]="登録に失敗しました"
       render "new"
     end
