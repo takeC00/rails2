@@ -21,19 +21,19 @@
     <h2>オススメのエリア</h2>
     <div class="grid">
       <div class="grid_child_1">
-        <%= link_to '東京'%><br>
+        <%= link_to '東京',{:controller=>"rooms",:action=>"search",:q=>{:adress_cont=>'東京'}}%><br>
         <%=image_tag 'img_tokyo.jpeg', size: '250x350' %>
       </div>
       <div class="grid_child_2">
-        <%= link_to "大阪", class:"Editlink"%><br>
+        <%= link_to '大阪',{:controller=>"rooms",:action=>"search",:q=>{:adress_cont=>'大阪'}}%><br>
         <%=image_tag 'img_osaka.jpeg', size: '250x350' %>
       </div>
       <div class="grid_child_3">
-        <%= link_to "京都"%><br>
+        <%= link_to '京都',{:controller=>"rooms",:action=>"search",:q=>{:adress_cont=>'京都'}}%><br>
         <%=image_tag 'img_kyoto.jpeg', size: '250x350' %>
       </div>
       <div class="grid_child_4">
-        <%= link_to "札幌"%><br>
+        <%= link_to '札幌',{:controller=>"rooms",:action=>"search",:q=>{:adress_cont=>'札幌'}}%><br>
         <%=image_tag 'img_sapporo.jpeg', size: '250x350' %>
       </div>
     </div>
