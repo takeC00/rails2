@@ -1,8 +1,6 @@
 class ReservationsController < ApplicationController
   def index
     @reservation = Reservation.all
-    @room = Room.all
-    binding.pry
   end
   
   def create
@@ -23,6 +21,8 @@ class ReservationsController < ApplicationController
   def new
     @room = Room.find(params[:format])
     @reservation = Reservation.new
-
   end
+
+  
 end
+

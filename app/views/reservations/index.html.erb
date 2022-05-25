@@ -13,11 +13,11 @@
   <tbody>
     <% @reservation.each do |reservation| %>
       <tr>
-        <td><%=@room.name%></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
+        <td><%=reservation.room.name%></td>
+        <td><%=image_tag reservation.room.avatar.url%></td>
+        <td><%=reservation.start_day.strftime('%Y年%m月%d日')%></td>
+        <td><%=reservation.end_day.strftime('%Y年%m月%d日')%></td>
+        <td><%=reservation.stay_day*reservation.room.price%></td>
       </tr>
     <%end%>
   </tbody>
