@@ -67,3 +67,15 @@ yarn-debug.log*
 /storage/*
 !/storage/.keep
 /public/uploads
+
+postcss.config.js
+public/
+storage/
+test/
+tmp/
+vendor/
+lib/
+log/
+babel.config.js
+Rakefile
+README.md
