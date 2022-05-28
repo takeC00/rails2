@@ -11,18 +11,25 @@
 
   <body>
   <header>
-    <h1 class="link"><%= link_to "PoteShare", class:"link" %></h1>
+    <h1 class="link"><%= link_to "PoteShare",:users, class:"link" %></h1>
+    
+    <%= search_form_for @q, url: search_rooms_path do |f| %>
+      <%= f.search_field :adress_cont, placeholder:'エリア' %>
+      <%= f.search_field :name_or_introduction_or_price_cont, placeholder:'キーワード' %>
+      <%= f.submit '検索'%>
+    <% end %>
+    
     <% if user_signed_in? %>
-      <div class="navi-container">
+      <div class="header-navi">
         <input id="acd-check1" class="acd-check" type="checkbox">
-        <label class="acd-label" for="acd-check1">menu</label>
+        <label class="acd-label" for="acd-check1"><%=image_tag current_user.icon.url, class: "icon"%></label>
         <div class="acd-content">
           <ul>
-            <li>ルーム登録</li>
-            <li>予約一覧</li>
-            <li>登録一覧</li>
-            <li>設定</li>
-            <li><%= link_to 'ログアウト', destroy_user_session_path, method: :delete %></li>
+            <li><%=link_to "新規ルーム登録",:new_room%></li>
+            <li><%=link_to "予約一覧", reservations_path%></li>
+            <li><%=link_to "登録一覧",:rooms%></li>
+            <li><%=link_to "設定",current_user%></li>
+            <li><%=link_to "ログアウト", destroy_user_session_path, method: :delete %></li>
           </ul>
         </div>
       </div>
